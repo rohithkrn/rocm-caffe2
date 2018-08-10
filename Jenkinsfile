@@ -1,10 +1,10 @@
 node("rocm17-caffe2") {
     
-    properties(
-    [
-        pipelineTriggers([cron('00 19 * * *')]),
-    ]
-    )
+    // properties(
+   // [
+     //   pipelineTriggers([cron('00 19 * * *')]),
+   // ]
+    // )
     stage("checkout") {
         checkout scm
         sh 'git submodule update --init'
